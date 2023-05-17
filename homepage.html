@@ -93,8 +93,7 @@
                   <li class="nav-item ">
                     <a class="nav-link active" aria-current="page" href="#">
                       <figure class="help-button">
-
-                        <button class="btn btn-primary" id="showPopovers"><img src="image/helpIcon.png" alt="Help Icon">
+                        <button class="btn btn-primary bg-light" id="showPopovers"><img src="image/helpIcon.png" alt="Help Icon">
                           <figcaption class="figure-caption text-center">幫助中心</figcaption>
                         </button>
                       </figure>
@@ -144,7 +143,7 @@
               <div class="col-sm-2 d-flex flex-column">
                 <div id="sidebar-wrapper" class="flex-grow-1 bg-warning border-right ">
                   <div class="sidebar-heading" id="popover1" data-bs-toggle="popover" data-bs-placement="bottom"
-                    title="Popover 1" data-bs-content="This is the first popover.">商品項目</div>
+                    title="商品項目" data-bs-content="在這查詢商品項目">商品項目</div>
                   <div class="list-group list-group-flush">
                     <a href="#" class="no-underline list-group-item list-group-item-action bg-warning">手提電腦</a>
                     <a href="#" class="no-underline list-group-item list-group-item-action bg-warning">主機</a>
@@ -157,14 +156,16 @@
               </div>
               <div class="col-sm-8">
                 <form class="d-flex mb-2">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="popover2" data-bs-toggle="popover" data-bs-placement="bottom"
+                  title="查詢" data-bs-content="在這查詢特定商品">
                   <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 <div class="jumbotron p-5"></div>
 
                 <!-- best items 。推薦商品 -->
                 <div class="container mt-5">
-                  <h3>best items 。推薦商品</h3>
+                  <h3 id="popover3" data-bs-toggle="popover" data-bs-placement="bottom"
+                  title="商品" data-bs-content="推薦商品">best items 。推薦商品</h3>
                   <a href="#" class="no-underline list-group-item list-group-item-action bg-warning">更多</a>
                   <div class="row">
 
@@ -316,12 +317,28 @@
         var popover1 = bootstrap.Popover.getInstance(document.getElementById('popover1'))
         popover1.hide()
 
+        var popover2 = bootstrap.Popover.getInstance(document.getElementById('popover2'))
+        popover2.hide()
+
+        var popover3 = bootstrap.Popover.getInstance(document.getElementById('popover3'))
+        popover3.hide()
+
         document.body.classList.remove('popover-open')
       } else {
         var popover1 = new bootstrap.Popover(document.getElementById('popover1'), {
           placement: 'bottom'
         })
         popover1.show()
+
+        var popover2 = new bootstrap.Popover(document.getElementById('popover2'), {
+          placement: 'bottom'
+        })
+        popover2.show()
+
+        var popover3 = new bootstrap.Popover(document.getElementById('popover3'), {
+          placement: 'bottom'
+        })
+        popover3.show()
 
         document.body.classList.add('popover-open')
       }
