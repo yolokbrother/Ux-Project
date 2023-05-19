@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* Darken background when popovers are open */
+        body.popover-open {
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Sets color to black by default */
+        a.no-underline {
+            color: black;
+        }
+
+        /* Sets color to red when hovering over the link */
+        a.no-underline:hover {
+            color: red;
+        }
+
+        .jumbotron {
+            background-image: url('image/promoteHomePage.png');
+            color: #fff;
+            height: 500px;
+        }
+
+        .container-fluid.col-md-12 {
+            background-image: url('image/BG_HomePage.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        .container-fluid.col-md-10 {
+            background-color: #fff;
+            min-height: 100vh;
+        }
+
+        #sidebar-wrapper {
+            overflow-y: auto;
+        }
+
+        .sidebar-heading {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid col-md-12">
+        <div class="container-fluid col-md-10">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="homepage.html"><img src="image/homepageLogo.png" /></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">
+                                            <figure>
+                                                <img src="image/homebutton.png" alt="Home Button">
+                                                <figcaption class="figure-caption text-center">首頁</figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">
+                                            <figure>
+                                                <img src="image/newItemIcon.png" alt="Home Button">
+                                                <figcaption class="figure-caption text-center">最新商品</figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link active" aria-current="page" href="#">
+                                            <figure class="help-button">
+                                                <button class="btn btn-primary bg-light" id="showPopovers"><img
+                                                        src="image/helpIcon.png" alt="Help Icon">
+                                                    <figcaption class="figure-caption text-center">幫助中心</figcaption>
+                                                </button>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">
+                                            <figure>
+                                                <img src="image/newItemIcon.png" alt="Home Button">
+                                                <figcaption class="figure-caption text-center">購物車</figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex ms-auto">
+                                    <a class="nav-link active" aria-current="page" href="#">
+                                        <figure>
+                                            <img src="image/loginIcon.png" alt="Home Button">
+                                            <figcaption class="figure-caption text-center">會員登入 | 加入會員</figcaption>
+                                        </figure>
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="bg-warning p-3 rounded mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-sm-3 border-end border-dark text-center">
+                                <a href="#" class="no-underline font-weight-bold">聯絡我們</a>
+                            </div>
+                            <div class="col-sm-3 border-end border-dark text-center">
+                                <a href="#" class="no-underline font-weight-bold">自選組裝</a>
+                            </div>
+                            <div class="col-sm-3 border-end border-dark text-center">
+                                <a href="#" class="no-underline font-weight-bold">電腦組合</a>
+                            </div>
+                            <div class="col-sm-3 text-center">
+                                <a href="#" class="no-underline font-weight-bold">購物流程</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="homepage.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="computerPage.html">Destop Computer</a></li>
+                        </ol>
+                    </nav>
+
+                    <div class="btn-group" role="group" aria-label="Sort Order">
+                        <button type="button" class="btn btn-secondary"
+                            onclick="window.location.href='computerPageAsc.html'">Ascending</button>
+                        <button type="button" class="btn btn-secondary"
+                            onclick="window.location.href='computerPageDesc.html'">Descending</button>
+                    </div>
+
+
+
+                    <!-- productlist -->
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="row align-items-stretch">
+
+
+
+
+                                <div class="col-sm-3">
+                                    <div class="card h-100">
+                                        <img src="image/computer/computer2.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h8 class="card-title">【熱門推介】AMD 5600G 細箱文書組合</h8>
+                                            <p class="card-text">商品品牌： Future</p>
+                                            <p class="card-text">售價： HK$2499.00</p>
+                                            <a href="#" class="btn btn-primary">購買</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card h-100">
+                                        <img src="image/computer/computer1.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h8 class="card-title">【抵玩推介】i5-13400F RTX3050 Powered By ASUS打機組合</h8>
+                                            <p class="card-text">商品品牌： Future</p>
+                                            <p class="card-text">售價： HK$3499.00</p>
+                                            <a href="#" class="btn btn-primary">購買</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card h-100">
+                                        <img src="image/computer/computer3.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h8 class="card-title">【抵玩推介】i5-12400F RTX3050 超值打機組合</h8>
+                                            <p class="card-text">商品品牌： Future</p>
+                                            <p class="card-text">售價： HK$4999.00</p>
+                                            <a href="#" class="btn btn-primary">購買</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card h-100">
+                                        <img src="image/computer/computer4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h8 class="card-title">【抵玩推介】i5-12400F RTX3060 超值打機組合</h8>
+                                            <p class="card-text">商品品牌： Future</p>
+                                            <p class="card-text">售價： HK$5299.00</p>
+                                            <a href="productDisplaypage.html" class="btn btn-primary">購買</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- productlist -->
+                    <div class="container mt-5">
+                        <h3 id="popover3" data-bs-toggle="popover" data-bs-placement="bottom" title="商品"
+                            data-bs-content="推薦商品">Desktop電腦組合</h3>
+                        <div class="row">
+                            <div class="row align-items-stretch">
+
+
+
+                                <div class="col-sm-3">
+                                    <div class="card h-100">
+                                        <img src="image/computer/computer4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h8 class="card-title">i5-13400F RTX3060 打機組合</h8>
+                                            <p class="card-text">商品品牌： Future</p>
+                                            <p class="card-text">售價： HK$5599.00</p>
+                                            <a href="productDisplaypage.html" class="btn btn-primary">購買</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card h-100">
+                                        <img src="image/computer/computer1.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h8 class="card-title">【ASUS信仰】i5-13400F RTX3050 Powered By ASUS打機組合</h8>
+                                            <p class="card-text">商品品牌： Future</p>
+                                            <p class="card-text">售價： HK$6199.00</p>
+                                            <a href="#" class="btn btn-primary">購買</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card h-100">
+                                        <img src="image/computer/computer2.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h8 class="card-title">【ASUS】i5-13400F RTX3050 Powered By ASUS打機組合</h8>
+                                            <p class="card-text">商品品牌： Future</p>
+                                            <p class="card-text">售價： HK$6399.00</p>
+                                            <a href="#" class="btn btn-primary">購買</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card h-100">
+                                        <img src="image/computer/computer1.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h8 class="card-title">【抵玩推介】i5-12400F RTX3070 超值打機組合</h8>
+                                            <p class="card-text">商品品牌： Future</p>
+                                            <p class="card-text">售價： HK$6999.00</p>
+                                            <a href="#" class="btn btn-primary">購買</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

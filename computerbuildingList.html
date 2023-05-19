@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* Darken background when popovers are open */
+        body.popover-open {
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Sets color to black by default */
+        a.no-underline {
+            color: black;
+        }
+
+        /* Sets color to red when hovering over the link */
+        a.no-underline:hover {
+            color: red;
+        }
+
+        .jumbotron {
+            background-image: url('image/promoteHomePage.png');
+            color: #fff;
+            height: 500px;
+        }
+
+        .container-fluid.col-md-12 {
+            background-image: url('image/BG_HomePage.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        .container-fluid.col-md-10 {
+            background-color: #fff;
+            min-height: 100vh;
+        }
+
+        #sidebar-wrapper {
+            overflow-y: auto;
+        }
+
+        .sidebar-heading {
+            padding: 10px;
+        }
+
+        .container {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 2rem;
+        }
+
+        .form-select {
+            margin-bottom: 1rem;
+        }
+
+        select option.active {
+            background-color: #00ff00;
+            /* Green color */
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid col-md-12">
+        <div class="container-fluid col-md-10">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="homepage.html"><img src="image/homepageLogo.png" /></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">
+                                            <figure>
+                                                <img src="image/homebutton.png" alt="Home Button">
+                                                <figcaption class="figure-caption text-center">首頁</figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">
+                                            <figure>
+                                                <img src="image/newItemIcon.png" alt="Home Button">
+                                                <figcaption class="figure-caption text-center">最新商品</figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link active" aria-current="page" href="#">
+                                            <figure class="help-button">
+                                                <button class="btn btn-primary bg-light" id="showPopovers"><img
+                                                        src="image/helpIcon.png" alt="Help Icon">
+                                                    <figcaption class="figure-caption text-center">幫助中心</figcaption>
+                                                </button>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">
+                                            <figure>
+                                                <img src="image/newItemIcon.png" alt="Home Button">
+                                                <figcaption class="figure-caption text-center">購物車</figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex ms-auto">
+                                    <a class="nav-link active" aria-current="page" href="#">
+                                        <figure>
+                                            <img src="image/loginIcon.png" alt="Home Button">
+                                            <figcaption class="figure-caption text-center">會員登入 | 加入會員</figcaption>
+                                        </figure>
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="bg-warning p-3 rounded mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-sm-3 border-end border-dark text-center">
+                                <a href="#" class="no-underline font-weight-bold">聯絡我們</a>
+                            </div>
+                            <div class="col-sm-3 border-end border-dark text-center">
+                                <a href="#" class="no-underline font-weight-bold">自選組裝</a>
+                            </div>
+                            <div class="col-sm-3 border-end border-dark text-center">
+                                <a href="#" class="no-underline font-weight-bold">電腦組合</a>
+                            </div>
+                            <div class="col-sm-3 text-center">
+                                <a href="#" class="no-underline font-weight-bold">購物流程</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="homepage.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="computerbuildingList.html">Computer Building List</a>
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <h1 class="mt-5 ">PC Building System</h1>
+                    <div class="container border h-100 rounded">
+
+                        <div class="row">
+                            <form id="componentForm" class="col-6">
+                                <div class="mb-3">
+                                    <select id="componentType" class="form-select">
+                                        <option value="_all_">全部</option>
+                                        <option value="cpu">中央處理器</option>
+                                        <option value="4">主機板</option>
+                                        <option value="5">記憶體</option>
+                                        <option value="15">硬碟機</option>
+                                        <option value="16">固態硬碟</option>
+                                        <option value="graphicsCard">顯示卡</option>
+                                        <option value="8">電源供應器</option>
+                                        <option value="23">機箱</option>
+                                    </select>
+                                    <!-- Second select element - initially hidden -->
+                                    <div id="graphicsCard" class="form-select" style="display: none;">
+                                        <button type="button" class="list-group-item list-group-item-action" selected
+                                            disabled>Select Graphics Card</button>
+                                        <button type="button" class="list-group-item list-group-item-action"
+                                            value="NVIDIA GeForce RTX 3070">NVIDIA GeForce RTX 3070 $4000<a
+                                                href="productDisplaypageforBS.html">Detail</a>
+                                        </button>
+                                        <button type="button" class="list-group-item list-group-item-action"
+                                            value="AMD Radeon RX 6800 XT">AMD Radeon RX 6800 XT $4300<a
+                                                href="productDisplaypageforBS.html">Detail</a>
+                                        </button>
+                                        <button type="button" class="list-group-item list-group-item-action"
+                                            value="NVIDIA GeForce GTX 1660">NVIDIA GeForce GTX 1660 $5000<a
+                                                href="productDisplaypageforBS.html">Detail</a>
+                                        </button>
+                                        <button type="button" class="list-group-item list-group-item-action"
+                                            value="AMD Radeon RX 580">AMD Radeon RX 580 $3000<a
+                                                href="productDisplaypageforBS.html">Detail</a>
+                                        </button>
+                                    </div>
+
+                                    <div id="cpu" class="form-select" style="display: none;">
+                                        <button type="button" class="list-group-item list-group-item-action" selected
+                                            disabled>Select CPU</button>
+                                        <button type="button" class="list-group-item list-group-item-action"
+                                            value="Intel Core i5">Intel Core i5 $3000<a
+                                                href="productDisplaypageforBS.html">Detail</a></button>
+                                        <button type="button" class="list-group-item list-group-item-action"
+                                            value="Intel Core i7">Intel Core i7 $3400<a
+                                                href="productDisplaypageforBS.html">Detail</a></button>
+                                        <button type="button" class="list-group-item list-group-item-action"
+                                            value="AMD Ryzen 5">AMD Ryzen 5 $2500<a
+                                                href="productDisplaypageforBS.html">Detail</a></button>
+                                        <button type="button" class="list-group-item list-group-item-action"
+                                            value="AMD Ryzen 7">AMD Ryzen 7 $3600<a
+                                                href="productDisplaypageforBS.html">Detail</a></button>
+                                    </div>
+                                </div>
+                                <!-- Add other components like RAM, GPU, etc. in the same format -->
+                                <button type="submit" class="btn btn-primary">Add Components</button>
+                            </form>
+                            <div class="col-6">
+                                <h2>Selected Components</h2>
+                                <ul id="selectedComponents" class="list-group"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const componentType = document.getElementById('componentType');
+        const graphicsCard = document.getElementById('graphicsCard');
+        const cpu = document.getElementById('cpu');
+
+        // Add an event listener to the first select element to detect changes
+        componentType.addEventListener('change', function () {
+            // Hide all component select elements
+            graphicsCard.style.display = 'none';
+            cpu.style.display = 'none';
+
+            // Show the select element corresponding to the selected component type
+            if (componentType.value === 'graphicsCard') {
+                graphicsCard.style.display = 'block';
+            }
+            else if (componentType.value === 'cpu') {
+                cpu.style.display = 'block';
+            }
+        });
+
+        const listGroup1 = document.getElementById('graphicsCard');
+        const listGroup2 = document.getElementById('cpu');
+        let buttonValue = '';
+
+        listGroup1.addEventListener('click', function (event) {
+            const clickedButton = event.target;
+            buttonValue = clickedButton.textContent;
+        });
+
+        listGroup2.addEventListener('click', function (event) {
+            const clickedButton = event.target;
+            buttonValue = clickedButton.textContent;
+        });
+
+        document.getElementById('componentForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const selectedComponents = document.getElementById('selectedComponents');
+            // Check which component type is currently selected and get the selected component
+            const componentType = document.getElementById('componentType');
+            const selectedComponentType = componentType.options[componentType.selectedIndex].text;
+
+            const listItem = document.createElement('li');
+            listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+            listItem.textContent = `${selectedComponentType}: ${buttonValue}`;
+
+            // Add a delete button to the list item
+            const deleteButton = document.createElement('button');
+            deleteButton.className = 'btn btn-danger btn-sm';
+            deleteButton.textContent = 'Delete';
+            deleteButton.addEventListener('click', function () {
+                listItem.remove();
+                // Remove the active class from the corresponding option in the componentType select element
+                const options = componentType.options;
+                for (let i = 0; i < options.length; i++) {
+                    const option = options[i];
+                    if (option.text === selectedComponentType) {
+                        option.classList.remove('active');
+                    }
+                }
+            });
+
+            // Check if the selected component type appears in the selectedComponents list
+            const listItems = selectedComponents.getElementsByTagName('li');
+            let found = false;
+            for (let i = 0; i < listItems.length; i++) {
+                const item = listItems[i];
+                if (item.textContent.includes(selectedComponentType)) {
+                    found = true;
+                    break;
+                }
+            }
+            // If the selected component type appears in the list, update the corresponding option with a green background color
+            if (found) {
+                const options = componentType.options;
+                for (let i = 0; i < options.length; i++) {
+                    const option = options[i];
+                    if (option.text === selectedComponentType) {
+                        option.classList.add('active');
+                    }
+                }
+            }
+
+            listItem.appendChild(deleteButton);
+            selectedComponents.appendChild(listItem);
+
+            // Highlight the corresponding option in the `componentType` select element
+            const options = componentType.options;
+            for (let i = 0; i < options.length; i++) {
+                const option = options[i];
+                if (option.text === selectedComponentType) {
+                    option.classList.add('active');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
